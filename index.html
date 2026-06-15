@@ -8,12 +8,29 @@
   </head>
   <body>
     <div class="main-layout">
-      <aside class="sidebar left-sidebar">
-        <div class="filter-block">
-          <p class="label-title">Category</p>
-          <div id="categoryFilter" class="tool-list"></div>
+
+      <!-- Filters: display:contents on desktop so sidebars sit in the grid;
+           position:fixed bottom sheet on mobile -->
+      <div class="filters-panel" id="filtersPanel">
+        <div class="filters-drawer-header">
+          <span>Filters</span>
+          <button class="filters-close" id="filtersClose" aria-label="Close filters">✕</button>
         </div>
-      </aside>
+
+        <aside class="sidebar left-sidebar">
+          <div class="filter-block">
+            <p class="label-title">Category</p>
+            <div id="categoryFilter" class="tool-list"></div>
+          </div>
+        </aside>
+
+        <aside class="sidebar right-sidebar">
+          <div class="filter-block">
+            <p class="label-title">Tools</p>
+            <div id="toolsFilter" class="tool-list"></div>
+          </div>
+        </aside>
+      </div>
 
       <div class="content-area">
         <header class="page-header">
@@ -29,16 +46,17 @@
           </div>
         </header>
 
+        <button class="filters-toggle" id="filtersToggle">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+            <path d="M1 3h13M3 7.5h9M5.5 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          Filters
+        </button>
+
         <section id="projects" class="project-list"></section>
         <p id="emptyState" class="empty hidden">No projects match these filters.</p>
       </div>
 
-      <aside class="sidebar right-sidebar">
-        <div class="filter-block">
-          <p class="label-title">Tools</p>
-          <div id="toolsFilter" class="tool-list"></div>
-        </div>
-      </aside>
     </div>
 
     <script type="module" src="./script.js"></script>

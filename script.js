@@ -101,3 +101,28 @@ function renderProjects() {
 renderCategoryOptions();
 renderToolOptions();
 renderProjects();
+
+// ── Mobile filter drawer ──
+const filtersToggle = document.getElementById("filtersToggle");
+const filtersPanel  = document.getElementById("filtersPanel");
+const filtersClose  = document.getElementById("filtersClose");
+
+const backdrop = document.createElement("div");
+backdrop.className = "filters-backdrop";
+document.body.appendChild(backdrop);
+
+function openFilters() {
+  filtersPanel.classList.add("open");
+  backdrop.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeFilters() {
+  filtersPanel.classList.remove("open");
+  backdrop.classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+filtersToggle.addEventListener("click", openFilters);
+filtersClose.addEventListener("click", closeFilters);
+backdrop.addEventListener("click", closeFilters);
