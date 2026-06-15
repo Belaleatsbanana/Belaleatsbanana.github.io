@@ -249,7 +249,8 @@ export const projects = [
       "JavaScript",
       "React",
       "Node.js",
-      "MongoDB"
+      "MongoDB",
+      "Docker"
     ],
     "repoUrl": "https://github.com/Belaleatsbanana/safecampus-social-platform",
     "demoUrl": ""
@@ -369,7 +370,8 @@ export const projects = [
       "TypeScript",
       "Python",
       "Next.js",
-      "FastAPI"
+      "FastAPI",
+      "Docker"
     ],
     "repoUrl": "https://github.com/Belaleatsbanana/travellin-bedouin",
     "demoUrl": ""
