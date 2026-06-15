@@ -113,6 +113,7 @@ export const projects = [
     "description": "A C++ SFML application that visualizes game trees for AI decision-making, useful for exploring minimax search and alpha-beta pruning in game contexts.",
     "categories": [
       "Artificial Intelligence",
+      "Data Structures & Algorithms",
       "Software Engineering"
     ],
     "tools": [

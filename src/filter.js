@@ -11,7 +11,8 @@ export const ALLOWED_CATEGORIES = [
   "Software Engineering",
   "Side Hustle",
   "Data Science",
-  "Data Analysis"
+  "Data Analysis",
+  "Data Structures & Algorithms"
 ];
 
 function safeCategories(project) {
