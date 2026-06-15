@@ -36,7 +36,8 @@ export const projects = [
       "Data Science"
     ],
     "tools": [
-      "Python"
+      "Python",
+      "PyTorch"
     ],
     "repoUrl": "https://github.com/Belaleatsbanana/cctv-anomaly-detection",
     "demoUrl": ""
@@ -50,7 +51,8 @@ export const projects = [
     ],
     "tools": [
       "Python",
-      "Jupyter Notebook"
+      "Jupyter Notebook",
+      "Pandas"
     ],
     "repoUrl": "https://github.com/Belaleatsbanana/titanic-survival-prediction",
     "demoUrl": ""
@@ -64,7 +66,8 @@ export const projects = [
     ],
     "tools": [
       "Jupyter Notebook",
-      "Python"
+      "Python",
+      "Pandas"
     ],
     "repoUrl": "https://github.com/Belaleatsbanana/hr-analytics",
     "demoUrl": ""
@@ -78,7 +81,8 @@ export const projects = [
       "Data Science"
     ],
     "tools": [
-      "Python"
+      "Python",
+      "PyTorch"
     ],
     "repoUrl": "https://github.com/Belaleatsbanana/food101-deep-learning-benchmark",
     "demoUrl": ""
@@ -162,7 +166,8 @@ export const projects = [
     ],
     "tools": [
       "Python",
-      "Jupyter Notebook"
+      "Jupyter Notebook",
+      "PyTorch"
     ],
     "repoUrl": "https://github.com/Belaleatsbanana/medical-qa-finetuning",
     "demoUrl": ""
@@ -177,7 +182,8 @@ export const projects = [
     ],
     "tools": [
       "Jupyter Notebook",
-      "Python"
+      "Python",
+      "Pandas"
     ],
     "repoUrl": "https://github.com/Belaleatsbanana/machine-learning-analysis",
     "demoUrl": ""
@@ -191,7 +197,8 @@ export const projects = [
     ],
     "tools": [
       "Jupyter Notebook",
-      "Python"
+      "Python",
+      "Pandas"
     ],
     "repoUrl": "https://github.com/Belaleatsbanana/machine-learning-notebooks",
     "demoUrl": ""
@@ -337,7 +344,8 @@ export const projects = [
     ],
     "tools": [
       "Python",
-      "Jupyter Notebook"
+      "Jupyter Notebook",
+      "PyTorch"
     ],
     "repoUrl": "https://github.com/Belaleatsbanana/gnn-cora-node-classification",
     "demoUrl": ""
