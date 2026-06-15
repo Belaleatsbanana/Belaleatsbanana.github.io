@@ -1,0 +1,248 @@
+:root {
+  color-scheme: dark;
+  --bg: #0b1020;
+  --panel: #111830;
+  --border: #263352;
+  --text: #e8eeff;
+  --muted: #9fb0da;
+  --accent: #7ca6ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+/* ── Header ── */
+
+.page-header {
+  display: grid;
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-header h1 {
+  margin: 0;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.page-header p {
+  max-width: 72ch;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 0.85rem;
+}
+
+/* ── 3-column layout ── */
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr) 340px;
+  grid-template-areas: "left center right";
+  gap: 0 1.5rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  align-items: start;
+}
+
+.left-sidebar  { grid-area: left; }
+.content-area  { grid-area: center; }
+.right-sidebar { grid-area: right; }
+
+.sidebar {
+  position: sticky;
+  top: 2rem;
+}
+
+/* ── Filter blocks ── */
+
+.filter-block {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.9rem;
+}
+
+label,
+.label-title {
+  color: var(--muted);
+  margin: 0 0 0.55rem;
+  display: block;
+}
+
+
+.tool-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+#toolsFilter {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tool-chip {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.35rem 0.65rem;
+  background: #0c1430;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: border-color 0.12s, background 0.12s, color 0.12s;
+  user-select: none;
+}
+
+#categoryFilter .tool-chip {
+  width: 100%;
+}
+
+.tool-chip:hover {
+  border-color: var(--accent);
+}
+
+.tool-chip.selected {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0b1020;
+}
+
+.tool-chip input {
+  margin: 0;
+  accent-color: #0b1020;
+}
+
+/* ── Project cards ── */
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  width: 100%;
+}
+
+.project-row {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  width: 100%;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.project-row:hover {
+  border-color: var(--accent);
+  background: #131d3a;
+}
+
+.project-row-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.project-row-top > :first-child {
+  flex: 1 1 28rem;
+  min-width: min(100%, 18rem);
+}
+
+.project-row h2 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+  overflow-wrap: anywhere;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  flex: 0 0 auto;
+}
+
+.project-description {
+  margin-top: 0.15rem;
+  margin-bottom: 0.6rem;
+}
+
+.meta {
+  color: var(--muted);
+  margin: 0.25rem 0;
+  font-size: 0.92rem;
+}
+
+/* ── Links ── */
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ── Misc ── */
+
+.empty {
+  color: var(--muted);
+  margin-top: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ── Responsive ── */
+
+
+@media (max-width: 860px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "left"
+      "right"
+      "center";
+    padding: 1.4rem 0.75rem 2.8rem;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .project-row {
+    padding: 0.9rem;
+  }
+
+  .project-row-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-links {
+    gap: 0.65rem;
+  }
+}
