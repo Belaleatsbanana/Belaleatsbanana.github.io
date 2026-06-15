@@ -72,11 +72,34 @@ body {
   overflow-wrap: anywhere;
 }
 
+.profile-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.5rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.profile-meta a {
+  color: var(--muted);
+}
+
+.profile-meta a:hover {
+  color: var(--accent);
+}
+
+.meta-dot {
+  color: var(--border);
+  user-select: none;
+}
+
 .profile-links {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
-  margin-top: 0.85rem;
+  margin-top: 0.6rem;
 }
 
 /* ── Mobile filter toggle button (hidden on desktop) ── */
