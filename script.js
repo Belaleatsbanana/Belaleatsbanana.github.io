@@ -24,9 +24,21 @@ function renderCategoryOptions() {
   const categories = ["All", ...getCategories()];
   for (const category of categories) {
     const value = category === "All" ? "" : category;
+    const count = value === ""
+      ? projects.length
+      : projects.filter(p => Array.isArray(p.categories) && p.categories.includes(value)).length;
+
     const chip = document.createElement("span");
     chip.className = "tool-chip" + (selectedCategory === value ? " selected" : "");
-    chip.textContent = category;
+
+    const label = document.createElement("span");
+    label.textContent = category;
+
+    const badge = document.createElement("span");
+    badge.className = "category-count";
+    badge.textContent = count;
+
+    chip.append(label, badge);
     chip.addEventListener("click", () => {
       selectedCategory = value;
       selectedTools.clear();

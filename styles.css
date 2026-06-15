@@ -128,6 +128,23 @@ body {
 
 #categoryFilter .tool-chip {
   width: 100%;
+  justify-content: space-between;
+}
+
+.category-count {
+  font-size: 0.78rem;
+  color: var(--muted);
+  background: rgba(255,255,255,0.06);
+  border-radius: 999px;
+  padding: 0.05rem 0.45rem;
+  min-width: 1.4rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.tool-chip.selected .category-count {
+  color: rgba(11, 16, 32, 0.7);
+  background: rgba(11, 16, 32, 0.15);
 }
 
 .tool-chip:hover {
